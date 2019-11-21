@@ -60,10 +60,7 @@ public class ScannerVC: UIViewController {
         
         didSet{
             
-            if navigationController == nil {
-                
-                headerViewController.title = title
-            }
+            headerViewController.title = title
         }
     }
     

@@ -71,8 +71,7 @@ public class HeaderVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         albumBtn.addTarget(self, action: #selector(fromAlbum(_:)), for: .touchUpInside)
         self.view.addSubview(albumBtn)
         
-        titleLabel.frame = CGRect(x: (screenWidth-100)/2, y: viewHeight-35, width: 100, height: 20)
-        titleLabel.text = "扫一扫"
+        titleLabel.frame = CGRect(x: screenWidth*0.3, y: viewHeight-35, width: screenWidth*0.4, height: 20)
         titleLabel.textColor = .black
         titleLabel.font = UIFont.systemFont(ofSize: 17)
         titleLabel.textAlignment = .center
