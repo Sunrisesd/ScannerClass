@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true   					#是否必须arc
   s.source_files = ["Source/**/*"]  				#SDK实际的重要文件路径
   #s.resource = ['Source/Tool/Resource.xcassets']
-  s.resource = 'Source/Tool/*.{png,xib,nib,bundle}'
+  s.resource = 'Source/Tool/*.bundle'
 
   #s.frameworks   = "UIKit","Foundation"   #需要导入的frameworks名称，注意不要带上frameworks
   #s.dependency "AFNetworking" #依赖的第三方库
