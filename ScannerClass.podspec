@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"   				#平台及版本
   s.ios.deployment_target = "9.0"     				#最低系统版本
   s.swift_version = "5.0"	 				#支持swift版本
-  s.source       = { :git => "https://github.com/Sunrisesd/ScannerClass.git" ,:tag => "#{s.version}"}   								#工程地址及版本号
+  s.source       = { :git => "https://github.com/Sunrisesd/ScannerClass.git" ,:tag => "#{s.version}"}   						#工程地址及版本号
   s.requires_arc = true   					#是否必须arc
   s.source_files = ["Source/**/*"]  				#SDK实际的重要文件路径
-  s.resource = "Source/Tool/Resource.xcassets"
+  s.resource = ['Source/Tool/Resource.xcassets']
   #s.resources = "Source/Tool/Resources.bundle"
 
   #s.frameworks   = "UIKit","Foundation"   #需要导入的frameworks名称，注意不要带上frameworks
