@@ -11,10 +11,12 @@ Pod::Spec.new do |s|
   s.swift_version = "5.0"	 				#支持swift版本
   s.source       = { :git => "https://github.com/Sunrisesd/ScannerClass.git" ,:tag => "#{s.version}"}   						#工程地址及版本号
   s.requires_arc = true   					#是否必须arc
-  s.source_files = ["Source/**/*"]  				#SDK实际的重要文件路径
-  #s.resource = ['Source/Tool/Resource.xcassets']
-  s.resource = 'Source/Tool/*.bundle'
+  s.source_files = ["Source/**/*.swift"]  			#SDK实际的重要文件路径
+  s.resources = "Source/Resource/Resources.bundle"
 
+
+  #s.resources = "Source/Tool/*.{png,bundle}"
+  #s.resource = ['Source/Tool/Image.xcassets']
   #s.frameworks   = "UIKit","Foundation"   #需要导入的frameworks名称，注意不要带上frameworks
   #s.dependency "AFNetworking" #依赖的第三方库
   #s.dependency "YYCache"      #依赖的第三方库
