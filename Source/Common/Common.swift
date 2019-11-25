@@ -24,10 +24,5 @@ public func imageNamed(_ name:String)-> UIImage {
         return UIImage()
     }
     
-//    guard let image = UIImage.init(named: "Resources.bundle/\(name)") else {
-//
-//        return UIImage()
-//    }
-    
     return image
 }
