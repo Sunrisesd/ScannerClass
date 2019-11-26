@@ -110,12 +110,15 @@ public class HeaderVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     // 选择图片成功后代理
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])  {
         
+        // 图片控制器退出
+        picker.dismiss(animated: true, completion: nil)
+        
         // 获取选择的原图
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         let valueString = self.recognizeQRCode(image)
         
-        if valueString!.count == 0 {
+        if valueString == nil || valueString!.count == 0 {
             
             self.showAlert("无法解析图片")
             
@@ -123,9 +126,6 @@ public class HeaderVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         }
         
         self.delegate?.didClickedImageButton(valueString!)
-         
-        // 图片控制器退出
-        picker.dismiss(animated: true, completion: nil)
     }
     
     /// 二维码识别
