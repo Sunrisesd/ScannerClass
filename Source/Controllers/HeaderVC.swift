@@ -135,14 +135,17 @@ public class HeaderVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy : CIDetectorAccuracyHigh])
         
-        let features = detector?.features(in: CIImage.init(image: image)!)
-        
-        guard (features?.count)! > 0 else {
+        guard let features = detector?.features(in: CIImage.init(image: image)!)  else {
             
             return nil
         }
         
-        let feature = features?.first as? CIQRCodeFeature
+        guard features.count > 0 else {
+            
+            return nil
+        }
+        
+        let feature = features.first as? CIQRCodeFeature
         
         return feature?.messageString
     }
